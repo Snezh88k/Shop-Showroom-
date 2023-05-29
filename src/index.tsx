@@ -19,6 +19,8 @@ import Favorite from "./components/favorite/Favorite";
 import Category from "./components/category/Category";
 import Catalog from "./components/catalog/Catalog";
 import Instashopping from "./components/instashopping/Instashopping";
+import Cart from "./components/cart/Cart";
+import ContactPage from "./pages/contact_page/ContactPage";
 
 const router = createBrowserRouter([
   {
@@ -65,6 +67,14 @@ const router = createBrowserRouter([
       {
         path: "/instashopping",
         element: <Instashopping />,
+      },
+      {
+        path: "/cart",
+        element: <Cart />,
+      },
+      {
+        path: "/contact",
+        element: <ContactPage />,
       },
     ],
   },

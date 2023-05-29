@@ -43,10 +43,12 @@ export default function Header({ className }: HeaderProps) {
             </ul>
           </li>
           <li>
-            {" "}
-            <NavLink to={`/instashopping`}>INSTASHOPPING </NavLink>{" "}
+            <NavLink to={`/instashopping`}>INSTASHOPPING </NavLink>
           </li>
-          <li>КОНТАКТЫ</li>
+          <li>
+            {" "}
+            <NavLink to={`/contact`}>КОНТАКТЫ </NavLink>
+          </li>
           <li>SALE</li>
         </ul>
       </nav>
@@ -71,7 +73,9 @@ export default function Header({ className }: HeaderProps) {
             <span className={styles.countInCart}>5</span>
           </div>
 
-          <div className={styles.titleCart}>корзина</div>
+          <NavLink to={`/cart`} className={styles.titleCart}>
+            <div>корзина</div>
+          </NavLink>
         </div>
         <div className={styles.comeIn}>войти</div>
       </div>
