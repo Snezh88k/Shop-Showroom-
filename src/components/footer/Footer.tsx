@@ -12,9 +12,9 @@ export default function Footer() {
       <div className={styles.firstRow}>
         <span>© 2023, SHOWROOM</span>
         <div className={styles.socialMedia}>
-          <a href="/">h</a>
-          <a href="/">h</a>
-          <a href="/">h</a>
+          <a href="/"> </a>
+          <a href="/"> </a>
+          <a href="/"> </a>
         </div>
       </div>
       <div className={styles.secondRow}>
