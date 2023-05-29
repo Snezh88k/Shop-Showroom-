@@ -1,0 +1,41 @@
+.wrapper {
+  position: relative;
+  top: 0;
+  max-width: 1280px;
+  margin: 0 auto;
+  margin-top: 40px;
+  height: 140px;
+  padding-top: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.socialMedia {
+  margin-top: 30px;
+}
+
+.socialMedia a {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+}
+
+.socialMedia a:nth-child(1) {
+  background-image: url("../../image/tl.png");
+  background-size: contain;
+}
+.socialMedia a:nth-child(2) {
+  background-image: url("../../image/ws.png");
+  background-size: contain;
+}
+.socialMedia a:nth-child(3) {
+  background-image: url("../../image/instagram.png");
+  background-size: contain;
+}
+
+.secondRow ul {
+  display: flex;
+  gap: 20px;
+  text-transform: uppercase;
+}

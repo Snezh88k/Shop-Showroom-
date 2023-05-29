@@ -1,4 +1,9 @@
 .App {
   max-width: 1280px;
   margin: 0 auto;
+  min-height: calc(100vh - 180px);
+}
+
+footer {
+  background-color: #cc8a2814;
 }
