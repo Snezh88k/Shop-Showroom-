@@ -9,13 +9,16 @@ import ErrorPage from "./pages/error_page/ErrorPage";
 import MainPage from "./pages/main_page/MainPage";
 
 import { CategoryLoader } from "./loaders/CategoryLoader";
-import Catalog from "./components/catalog/Catalog";
+
 import LoginPage from "./pages/login_page/LoginPage";
 import LoginVKPage from "./pages/login_page/LoginVKPage";
 import CardProduct from "./components/card_product/CardProduct";
 import { ProductLoader } from "./loaders/ProductLoader";
 import Message from "./tg-message/Message";
 import Favorite from "./components/favorite/Favorite";
+import Category from "./components/category/Category";
+import Catalog from "./components/catalog/Catalog";
+import Instashopping from "./components/instashopping/Instashopping";
 
 const router = createBrowserRouter([
   {
@@ -28,9 +31,13 @@ const router = createBrowserRouter([
         element: <MainPage />,
       },
       {
-        path: "/category/:id",
-        loader: CategoryLoader,
+        path: "/catalog",
         element: <Catalog />,
+      },
+      {
+        path: "/catalog/:id",
+        loader: CategoryLoader,
+        element: <Category />,
       },
       {
         path: "/favotite",
@@ -53,6 +60,11 @@ const router = createBrowserRouter([
         path: "/product/:id",
         loader: ProductLoader,
         element: <CardProduct />,
+      },
+
+      {
+        path: "/instashopping",
+        element: <Instashopping />,
       },
     ],
   },

@@ -1,0 +1,45 @@
+.catalogWrapper {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.productImg {
+  height: 300px;
+}
+
+.productDescription {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.productDescription h3 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.like {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  top: -290px;
+  right: 10px;
+}
+
+.like svg {
+  fill: rgb(0, 0, 0, 0);
+  stroke: black;
+  stroke-width: 3px;
+  cursor: pointer;
+}
+
+.like svg:hover {
+  stroke: white;
+}
+
+.like svg:active {
+  fill: rgb(0, 0, 0, 1);
+}

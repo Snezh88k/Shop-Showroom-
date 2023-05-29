@@ -1,31 +1,37 @@
+.header {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  font-weight: 300;
+  font-size: 18px;
+  text-transform: uppercase;
+  z-index: 10;
+  border-bottom: 1px solid rgb(0, 0, 0, 0.1);
+}
+
 .nav {
   position: relative;
   height: 80px;
   display: flex;
   align-items: stretch;
-  border-bottom: 1px solid rgb(0, 0, 0, 0.1);
-  z-index: 10;
+  justify-content: space-between;
 }
 
 .list {
-  width: 70%;
+  width: 40%;
+  height: 100%;
   list-style: none;
   display: flex;
-  align-items: center;
+
   justify-content: space-between;
   gap: 40px;
-  cursor: pointer;
-  font-family: "Oswald", sans-serif;
-  font-weight: 300;
-  font-size: 18px;
-  text-transform: uppercase;
 }
 
-.list > li:nth-child(1) {
+/* .list > li:nth-child(1) {
   font-weight: 500;
-}
+} */
 
-.list > li:nth-child(7) {
+.list > li:nth-child(5) {
   font-weight: 500;
   color: brown;
 }
@@ -36,7 +42,10 @@
   height: 100%;
 }
 
-.list > li:hover {
+.list > li:hover,
+.titleCart:hover,
+.comeIn:hover {
+  cursor: pointer;
   text-shadow: rgb(43, 43, 43) 1px 0 15px;
 }
 
@@ -44,10 +53,11 @@
   display: none;
   position: absolute;
   width: 150px;
-  top: 65px;
+  top: 80px;
   background-color: white;
   padding: 10px 15px;
-  box-shadow: rgb(43, 43, 43) 1px 0 20px;
+  border: 1px solid rgb(0, 0, 0, 0.1);
+  /* box-shadow: rgb(43, 43, 43) 1px 0 20px; */
 }
 
 .dropList li:hover {
@@ -61,4 +71,60 @@
 
 .nav ul li:hover > ul {
   display: block;
+}
+
+.rightBar {
+  position: relative;
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+}
+
+.rightBar::before {
+  position: relative;
+  content: "";
+  width: 1px;
+  height: 30px;
+  background-color: rgb(0, 0, 0, 0.1);
+  top: 24px;
+}
+
+.cart {
+  margin-left: 20px;
+  display: flex;
+  align-items: stretch;
+}
+
+.cartLogo {
+  width: 32px;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.countInCart {
+  background-color: #d18b22;
+  color: white;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 15px;
+  width: 15px;
+  top: 48px;
+  left: 18px;
+  font-size: 14px;
+  border-radius: 50%;
+}
+
+.titleCart {
+  display: flex;
+  align-items: center;
+  margin-left: 5px;
+}
+
+.comeIn {
+  display: flex;
+  align-items: center;
+  margin-left: 35px;
 }

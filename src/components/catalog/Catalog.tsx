@@ -1,55 +1,58 @@
-import { useLoaderData } from "react-router-dom";
-import { CategoryLoader } from "../../loaders/CategoryLoader";
-import { LoaderFunction, Link } from "react-router-dom";
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 
 import styles from "./Catalog.module.css";
-import addFavorites from "../../function/addFavorites";
-import MiniCardProduct from "../mini_card_product/MiniCardProduct";
+import { Link } from "react-router-dom";
 
-export type LoaderData<TLoaderFn extends LoaderFunction> = Awaited<
-  ReturnType<TLoaderFn>
-> extends Response | infer D
-  ? D
-  : never;
+export default function Catalog() {
+  const category = [
+    {
+      name: "Юбки",
+      img: "https://ae01.alicdn.com/kf/S07fdf8b52c40472599e729f2e052acdcy.jpg?width=800&height=800&hash=1600",
+      link: `./yubki`,
+    },
+    {
+      name: "Шапки",
+      img: "https://cdn1.ozone.ru/s3/multimedia-v/6006858823.jpg",
 
-interface Item {
-  id: string;
-  title: string;
-  imgUrl: string;
-  price: number;
-}
+      link: "",
+    },
+    {
+      name: "Свитера",
+      img: "",
 
-const Catalog = () => {
-  const category = useLoaderData() as Awaited<
-    ReturnType<typeof CategoryLoader>
-  >;
-
-  const [products, setProducts] = useState([]);
-
-  useEffect(() => {
-    fetch(
-      `https://64611a6f491f9402f49ea5c8.mockapi.io/Catalog/?category=${category}`
-    )
-      .then((response) => response.json())
-      .then((data) => {
-        setProducts(data);
-        // console.log(data);
-      });
-  }, [category]);
+      link: "",
+    },
+    {
+      name: "Трусы",
+      img: "https://www.terranovastyle.ru/media/catalog/product/cache/a27baa1fe94e9069785089823862ff8e/s/l/slmd50196p23-bras-cotone-tu-s105_list_1.jpg",
+      link: "",
+    },
+    {
+      name: "Платья",
+      img: "https://ae04.alicdn.com/kf/Sb7bee675adb94c4e8afe20445dd90d871.jpg_640x640.jpg",
+      link: `./platya`,
+    },
+    {
+      name: "Брюки",
+      img: "https://ae04.alicdn.com/kf/H8728e7d4abec4ccbb39d0bb2071bb8dc1.jpg_640x640.jpg",
+      link: `./bryuki`,
+    },
+  ];
 
   return (
-    <div style={{ marginTop: "30px" }}>
-      {category === "bryuki" && <h1>Брюки</h1>}
-      {category === "yubki" && <h1>Юбки</h1>}
-      {category === "platya" && <h1>Платья</h1>}
-      <div className={styles.catalogWrapper}>
-        {products
-          ? products.map((item: Item) => <MiniCardProduct product={item} />)
-          : ""}
-      </div>
+    <div className={styles.catalogWrapper}>
+      {category.map((cat) => {
+        return (
+          <div key={cat.name} className={styles.categoryWrapper}>
+            <Link to={cat.link}>
+              <div className={styles.imgWrapper}>
+                <img src={cat.img} alt={cat.name} />
+              </div>
+              <div className={styles.title}>{cat.name}</div>
+            </Link>
+          </div>
+        );
+      })}
     </div>
   );
-};
-
-export default Catalog;
+}
