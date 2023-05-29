@@ -1,0 +1,85 @@
+.buttonBuy {
+  width: 220px;
+  height: 45px;
+  background-color: black;
+  border: 2px solid black;
+  color: white;
+  border-radius: 5px;
+  transition: 0.5s;
+  margin-right: 20px;
+}
+
+.mainImage {
+  width: 600px;
+  cursor: zoom-in;
+}
+
+.buttonBuy:hover {
+  border: 2px solid rgb(82 82 82);
+  background-color: rgb(82 82 82);
+}
+
+.productWrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.productDescription {
+  display: flex;
+  flex-direction: column;
+}
+
+.productDescription h1 {
+  font-weight: 400;
+}
+
+.price {
+  margin-top: 15px;
+}
+
+.changeSize {
+  margin-top: 100px;
+  border: 1px solid black;
+  border-radius: 5px;
+  height: 50px;
+  padding: 10px;
+}
+
+.like {
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  width: 45px;
+  height: 45px;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+
+.like img {
+  width: 25px;
+  height: 25px;
+}
+
+.wrapperLike {
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+}
+
+.sizeTable {
+  width: max-content;
+  display: inline;
+  cursor: pointer;
+  margin-top: 10px;
+  font-size: 13px;
+  letter-spacing: 0.08em;
+  border-bottom: 1px solid black;
+  transition: all 0.3s linear;
+}
+
+.sizeTable:hover {
+  border-bottom: 1px solid white;
+  color: grey;
+}

@@ -1,0 +1,64 @@
+.nav {
+  position: relative;
+  height: 80px;
+  display: flex;
+  align-items: stretch;
+  border-bottom: 1px solid rgb(0, 0, 0, 0.1);
+  z-index: 10;
+}
+
+.list {
+  width: 70%;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  cursor: pointer;
+  font-family: "Oswald", sans-serif;
+  font-weight: 300;
+  font-size: 18px;
+  text-transform: uppercase;
+}
+
+.list > li:nth-child(1) {
+  font-weight: 500;
+}
+
+.list > li:nth-child(7) {
+  font-weight: 500;
+  color: brown;
+}
+
+.list li {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.list > li:hover {
+  text-shadow: rgb(43, 43, 43) 1px 0 15px;
+}
+
+.dropList {
+  display: none;
+  position: absolute;
+  width: 150px;
+  top: 65px;
+  background-color: white;
+  padding: 10px 15px;
+  box-shadow: rgb(43, 43, 43) 1px 0 20px;
+}
+
+.dropList li:hover {
+  text-shadow: rgb(43, 43, 43) 1px 0 15px;
+}
+
+.dropList li {
+  text-shadow: none;
+  margin-top: 8px;
+}
+
+.nav ul li:hover > ul {
+  display: block;
+}
