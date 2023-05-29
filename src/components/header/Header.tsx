@@ -54,7 +54,7 @@ export default function Header({ className }: HeaderProps) {
                 <NavLink to={`catalog/bryuki`}>Майки</NavLink>
               </li>
               <li>
-                <NavLink to={`catalog/bryuki`}>Шляпы</NavLink>
+                <NavLink to={`catalog/bryuki`}>Шляпы, блузки, рубашки</NavLink>
               </li>
               <li>
                 <NavLink to={`catalog/bryuki`}>Носки</NavLink>
@@ -94,9 +94,12 @@ export default function Header({ className }: HeaderProps) {
             <span className={styles.countInCart}>5</span>
           </div>
 
-          <NavLink to={`/cart`} className={styles.titleCart}>
-            <div>корзина</div>
-          </NavLink>
+          <div>
+            {" "}
+            <NavLink to={`/cart`} className={styles.titleCart}>
+              корзина{" "}
+            </NavLink>
+          </div>
         </div>
         <div className={styles.comeIn}>войти</div>
       </div>
