@@ -29,14 +29,17 @@ export default function MiniCardProduct({ product }: Products) {
 
   return (
     <div className={styles.cardWrapper}>
-      <div key={product.id}>
-        <Link to={`/product/${product.id}`}>
-          <img
-            src={product.imgUrl}
-            alt={product.title}
-            className={styles.productImg}
-          />
-        </Link>
+      <div>
+        <div className={styles.imgWrapper}>
+          <Link to={`/product/${product.id}`}>
+            <img
+              src={product.imgUrl}
+              alt={product.title}
+              className={styles.productImg}
+            />
+          </Link>
+        </div>
+
         <div className={styles.productDescription}>
           <h3>{product.title}</h3>
           <div className={styles.descriptionBotLine}>

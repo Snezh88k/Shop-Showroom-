@@ -4,6 +4,8 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  width: calc((100% - 75px) / 4);
+  height: auto;
 }
 
 .cardWrapper:hover {
@@ -12,8 +14,10 @@
   box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.2);
 }
 
-.productImg {
-  height: 300px;
+.imgWrapper a {
+  overflow: hidden;
+  display: block;
+  height: 350px;
 }
 
 .productDescription {
