@@ -65,10 +65,12 @@ export default function Header({ className }: HeaderProps) {
             <NavLink to={`/instashopping`}>INSTASHOPPING </NavLink>
           </li>
           <li>
-            {" "}
             <NavLink to={`/contact`}>КОНТАКТЫ </NavLink>
           </li>
-          <li>SALE</li>
+          <li>
+            {" "}
+            <NavLink to={`/contact`}>SALE</NavLink>
+          </li>
         </ul>
       </nav>
 

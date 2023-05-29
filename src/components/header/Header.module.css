@@ -27,7 +27,7 @@ nav {
   gap: 40px;
 }
 
-.list > li:nth-child(5) {
+.list > li:nth-child(5) a {
   font-weight: 500;
   color: brown;
 }
@@ -55,13 +55,13 @@ nav a:hover {
   display: none;
   flex-direction: column;
   position: absolute;
-  height: 200px;
   width: 200px;
   top: 60px;
   left: -15px;
-  background: rgb(187, 187, 187, 0.7);
+  background: rgba(255, 255, 255, 0.8);
   padding-left: 15px;
   padding-top: 10px;
+  padding-bottom: 15px;
   box-shadow: 3px 3px 3px rgb(187, 187, 187, 0.4);
 }
 

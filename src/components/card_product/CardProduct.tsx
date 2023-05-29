@@ -4,6 +4,7 @@ import { ProductLoader } from "../../loaders/ProductLoader";
 import BreadCrumbs from "../bread_crumbs/BreadCrumbs";
 import styles from "./CardProduct.module.css";
 
+import like from "../../image/heartSVG.svg";
 import SizeTable from "../size_table/SizeTable";
 
 export type LoaderData<TLoaderFn extends LoaderFunction> = Awaited<
@@ -80,7 +81,7 @@ export default function CardProduct() {
               <div className={styles.wrapperLike}>
                 <button className={styles.buttonBuy}>Добавить в корзину</button>
                 <button className={styles.like}>
-                  {/* <img src={like} alt="like" /> */}
+                  <img src={like} alt="like" />
                 </button>
               </div>
             </div>
