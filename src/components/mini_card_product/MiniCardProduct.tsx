@@ -4,6 +4,8 @@ import styles from "./MiniCardProduct.module.css";
 import addFavorites from "../../function/addFavorites";
 import clsx from "clsx";
 
+import cart from "../../image/cart2.png";
+
 type Products = {
   product: {
     id: string;
@@ -37,18 +39,28 @@ export default function MiniCardProduct({ product }: Products) {
         </Link>
         <div className={styles.productDescription}>
           <h3>{product.title}</h3>
-          <span>{product.price} ₽</span>
-          <span
-            className={clsx(styles.like, like ? styles.likeActive : "")}
-            onClick={() => addFavorites(product.id)}
-          >
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="-5 -5 100 100">
-              <path
-                d="M74.39,6.49c-8.65-8.65-22.67-8.65-31.31,0l-2.64,2.64L37.8,6.49c-8.65-8.65-22.67-8.65-31.31,0l0,0
+          <div className={styles.descriptionBotLine}>
+            <span>{product.price} ₽</span>
+            <div className={styles.bar}>
+              <span
+                className={clsx(styles.like, like ? styles.likeActive : "")}
+                onClick={() => addFavorites(product.id)}
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="-5 -14 100 100"
+                >
+                  <path
+                    d="M74.39,6.49c-8.65-8.65-22.67-8.65-31.31,0l-2.64,2.64L37.8,6.49c-8.65-8.65-22.67-8.65-31.31,0l0,0
   c-8.65,8.65-8.65,22.67,0,31.31l2.64,2.64l31.31,31.31l31.31-31.31l2.64-2.64C83.03,29.15,83.03,15.13,74.39,6.49z"
-              />
-            </svg>
-          </span>
+                  />
+                </svg>
+              </span>
+              <span className={styles.cart}>
+                <img src={cart} alt={cart} />
+              </span>
+            </div>
+          </div>
         </div>
       </div>
     </div>

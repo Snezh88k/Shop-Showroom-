@@ -1,8 +1,15 @@
 .cardWrapper {
+  position: relative;
   margin-top: 20px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+}
+
+.cardWrapper:hover {
+  z-index: 1;
+  transform: scale(1.02);
+  box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.2);
 }
 
 .productImg {
@@ -10,23 +17,38 @@
 }
 
 .productDescription {
+  padding: 5px;
   position: relative;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: start;
 }
 
 .productDescription h3 {
-  margin-top: 10px;
+  margin-top: 5px;
   margin-bottom: 10px;
+  font-weight: 400;
 }
 
+.descriptionBotLine {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.bar {
+  display: flex;
+}
 .like {
-  position: absolute;
-  width: 30px;
-  height: 30px;
-  top: -290px;
-  right: 10px;
+  display: flex;
+  align-items: center;
+  width: 24px;
+}
+
+.cart {
+  width: 22px;
+  margin-left: 10px;
+  cursor: pointer;
 }
 
 .like svg {
@@ -37,12 +59,12 @@
 }
 
 .likeActive svg {
-  fill: rgb(180, 29, 29);
-  stroke: rgb(180, 29, 29);
+  fill: rgb(255, 83, 83);
+  stroke: rgb(255, 83, 83);
   stroke-width: 3px;
   cursor: pointer;
 }
 
 .like svg:hover {
-  stroke: rgb(180, 29, 29);
+  stroke: rgb(255, 83, 83);
 }
