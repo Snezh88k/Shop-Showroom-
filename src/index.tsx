@@ -4,7 +4,11 @@ import { GoogleOAuthProvider } from "@react-oauth/google";
 import "./index.css";
 import App from "./App";
 
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import {
+  createBrowserRouter,
+  HashRouter,
+  RouterProvider,
+} from "react-router-dom";
 import ErrorPage from "./pages/error_page/ErrorPage";
 import MainPage from "./pages/main_page/MainPage";
 
@@ -86,7 +90,9 @@ const root = ReactDOM.createRoot(
 root.render(
   <React.StrictMode>
     <GoogleOAuthProvider clientId="64086974939-oijgmdetcv1c9a6envjks8qoov02adgp.apps.googleusercontent.com">
-      <RouterProvider router={router} />
+      <HashRouter basename="/">
+        <RouterProvider router={router} />
+      </HashRouter>
     </GoogleOAuthProvider>
   </React.StrictMode>
 );
