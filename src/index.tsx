@@ -4,11 +4,7 @@ import { GoogleOAuthProvider } from "@react-oauth/google";
 import "./index.css";
 import App from "./App";
 
-import {
-  createBrowserRouter,
-  HashRouter,
-  RouterProvider,
-} from "react-router-dom";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import ErrorPage from "./pages/error_page/ErrorPage";
 import MainPage from "./pages/main_page/MainPage";
 

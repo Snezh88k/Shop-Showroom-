@@ -1,10 +1,9 @@
 import { useLoaderData } from "react-router-dom";
 import { CategoryLoader } from "../../loaders/CategoryLoader";
-import { LoaderFunction, Link } from "react-router-dom";
+import { LoaderFunction } from "react-router-dom";
 import { useEffect, useState } from "react";
 
 import styles from "./Category.module.css";
-import addFavorites from "../../function/addFavorites";
 import MiniCardProduct from "../mini_card_product/MiniCardProduct";
 
 export type LoaderData<TLoaderFn extends LoaderFunction> = Awaited<
@@ -34,7 +33,6 @@ const Category = () => {
       .then((response) => response.json())
       .then((data) => {
         setProducts(data);
-        // console.log(data);
       });
   }, [category]);
 

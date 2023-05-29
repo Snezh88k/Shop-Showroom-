@@ -1,8 +1,7 @@
-import React, { useEffect, useState } from "react";
-import { Link, NavLink } from "react-router-dom";
+import React, { useState } from "react";
+import { NavLink } from "react-router-dom";
 import styles from "./Header.module.css";
 import clsx from "clsx";
-import LoginPage from "../../pages/login_page/LoginPage";
 
 import cart from "../../image/cart2.png";
 interface HeaderProps {

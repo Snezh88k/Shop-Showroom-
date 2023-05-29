@@ -1,5 +1,3 @@
-import React, { useEffect, useState } from "react";
-
 import styles from "./Catalog.module.css";
 import { Link } from "react-router-dom";
 

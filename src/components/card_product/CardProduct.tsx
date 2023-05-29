@@ -17,7 +17,7 @@ export default function CardProduct() {
   const loadData = useLoaderData() as LoaderData<typeof ProductLoader>;
 
   const [product, setProduct] = useState<any | null>(null);
-  const [size, setSize] = useState(null);
+  const [, setSize] = useState(null);
   const [scale, setScale] = useState(1);
   const [visible, setVisible] = useState(false);
 
@@ -30,6 +30,7 @@ export default function CardProduct() {
 
   useEffect(() => {
     prod();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const changeSize = (e: any) => {

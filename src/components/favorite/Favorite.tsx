@@ -9,8 +9,6 @@ interface ProductState {
   price: number;
 }
 
-type Prop = ProductState[];
-
 export default function Favorite() {
   const [favorites, setFavorites] = useState<string[]>([]);
 
@@ -29,7 +27,7 @@ export default function Favorite() {
       .then((responses) => Promise.all(responses.map((res) => res.json())))
       .then((data) => {
         data.map((item) => {
-          setProducts((oldArray) => [...oldArray, ...item]);
+          return setProducts((oldArray) => [...oldArray, ...item]);
         });
       });
   }, [favorites]);
