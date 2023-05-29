@@ -90,9 +90,7 @@ const root = ReactDOM.createRoot(
 root.render(
   <React.StrictMode>
     <GoogleOAuthProvider clientId="64086974939-oijgmdetcv1c9a6envjks8qoov02adgp.apps.googleusercontent.com">
-      <HashRouter basename="/">
-        <RouterProvider router={router} />
-      </HashRouter>
+      <RouterProvider router={router} />
     </GoogleOAuthProvider>
   </React.StrictMode>
 );
