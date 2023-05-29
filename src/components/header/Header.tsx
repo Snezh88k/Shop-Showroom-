@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import styles from "./Header.module.css";
 import clsx from "clsx";
@@ -10,25 +10,32 @@ interface HeaderProps {
 }
 
 export default function Header({ className }: HeaderProps) {
-  const pathname = document.location.pathname;
+  const [visible, setVisible] = useState(false);
 
-  const [currentUrl, setCurrentUrl] = React.useState(pathname);
+  const openDropList = (e: any) => {
+    setVisible(true);
+  };
 
-  useEffect(() => {
-    console.log(document.location.hash);
-  }, [currentUrl]);
+  const closeDropList = (e: any) => {
+    setVisible(false);
+  };
 
   return (
     <div className={clsx(styles.header, className)}>
-      <nav className={styles.nav}>
+      <nav>
         <ul className={styles.list}>
           <li>
-            {" "}
             <NavLink to={`/`}>главная </NavLink>{" "}
           </li>
-          <li>
+          <li
+            onMouseEnter={(e) => openDropList(e)}
+            onMouseLeave={(e) => closeDropList(e)}
+          >
             <NavLink to={`/catalog`}>КАТАЛОГ</NavLink>
-            <ul className={styles.dropList}>
+            <ul
+              className={clsx(styles.dropList, visible ? styles.open : "")}
+              onClick={(e) => closeDropList(e)}
+            >
               <li>
                 <NavLink to={`catalog/platya`}>Платья</NavLink>
               </li>
@@ -39,6 +46,18 @@ export default function Header({ className }: HeaderProps) {
 
               <li>
                 <NavLink to={`catalog/bryuki`}>Брюки</NavLink>
+              </li>
+              <li>
+                <NavLink to={`catalog/bryuki`}>Джинсы</NavLink>
+              </li>
+              <li>
+                <NavLink to={`catalog/bryuki`}>Майки</NavLink>
+              </li>
+              <li>
+                <NavLink to={`catalog/bryuki`}>Шляпы</NavLink>
+              </li>
+              <li>
+                <NavLink to={`catalog/bryuki`}>Носки</NavLink>
               </li>
             </ul>
           </li>

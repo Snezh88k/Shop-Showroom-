@@ -12,6 +12,10 @@ export default function BreadCrumbs({ path }: BreadCrumbsProps) {
         <span>Главная страница</span>
       </Link>
       <span className={styles.arrow}>&#10140;</span>
+      <Link to="/catalog">
+        <span>Каталог</span>
+      </Link>
+      <span className={styles.arrow}>&#10140;</span>
       <Link to={`/category/${path}`}>
         {path === "bryuki" && <span>Брюки</span>}
         {path === "yubki" && <span>Юбки</span>}
