@@ -4,7 +4,7 @@ import { ProductLoader } from "../../loaders/ProductLoader";
 import BreadCrumbs from "../bread_crumbs/BreadCrumbs";
 import styles from "./CardProduct.module.css";
 
-import like from "../../image/heartSVG.svg";
+import like from "../../image/like.png";
 import SizeTable from "../size_table/SizeTable";
 
 export type LoaderData<TLoaderFn extends LoaderFunction> = Awaited<
