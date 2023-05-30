@@ -29,11 +29,11 @@ const router = createBrowserRouter([
     errorElement: <ErrorPage />,
     children: [
       {
-        path: "/*",
+        path: "/",
         element: <MainPage />,
       },
       {
-        path: "/catalog/*",
+        path: "/catalog/",
         element: <Catalog />,
       },
       {
@@ -42,20 +42,20 @@ const router = createBrowserRouter([
         element: <Category />,
       },
       {
-        path: "/favotite/*",
+        path: "/favotite/",
         element: <Favorite />,
       },
       {
-        path: "/auth/*",
+        path: "/auth/",
         element: <LoginPage />,
       },
       {
-        path: "/authVK/*",
+        path: "/authVK/",
         element: <LoginVKPage />,
       },
 
       {
-        path: "/message/*",
+        path: "/message/",
         element: <Message />,
       },
       {
@@ -65,15 +65,15 @@ const router = createBrowserRouter([
       },
 
       {
-        path: "/instashopping/*",
+        path: "/instashopping/",
         element: <Instashopping />,
       },
       {
-        path: "/cart/*",
+        path: "/cart/",
         element: <Cart />,
       },
       {
-        path: "/contact/*",
+        path: "/contact/",
         element: <ContactPage />,
       },
     ],
