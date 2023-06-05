@@ -1,0 +1,73 @@
+@font-face {
+  font-family: "ivi-icons";
+  src: url("../../fonts/ivi-icons.woff2") format("woff2"),
+    url("../../fonts/ivi-icons.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+.wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.first_slider {
+  max-width: 400px;
+}
+
+.first_slider .slick-list {
+  height: 505px;
+}
+
+.first_slider img {
+  background-size: contain;
+  height: 100%;
+}
+
+.first_slider .slick-prev {
+  background-color: inherit;
+  position: absolute;
+  font-size: 0;
+  width: 50px;
+  height: 50px;
+  z-index: 10;
+  top: 45%;
+}
+
+.first_slider .slick-next {
+  background-color: inherit;
+  position: absolute;
+  font-size: 0;
+  height: 50px;
+  width: 50px;
+  z-index: 10;
+  transform: rotate(180deg);
+  right: 0;
+  top: 45%;
+}
+
+.first_slider .slick-next::before {
+  font-size: 30px;
+  content: "\E009";
+  font-family: ivi-icons;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 32px;
+  transition: 0.5s;
+}
+
+.first_slider .slick-next:hover,
+.first_slider .slick-prev:hover {
+  color: rgb(75, 75, 75);
+}
+
+.first_slider .slick-prev::before {
+  font-size: 30px;
+  content: "\E009";
+  font-family: ivi-icons;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 32px;
+  transition: 0.5s;
+}

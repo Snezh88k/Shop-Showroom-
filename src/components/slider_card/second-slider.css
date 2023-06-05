@@ -1,0 +1,9 @@
+.second_slider {
+  max-height: 540px;
+  width: fit-content;
+  padding: 15px;
+}
+
+.second_slider img {
+  max-height: 121px;
+}

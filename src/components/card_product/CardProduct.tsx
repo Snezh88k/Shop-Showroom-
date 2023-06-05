@@ -7,6 +7,8 @@ import styles from "./CardProduct.module.css";
 import like from "../../image/like.png";
 import SizeTable from "../size_table/SizeTable";
 
+import SliderCard from "../slider_card/SliderCard";
+
 export type LoaderData<TLoaderFn extends LoaderFunction> = Awaited<
   ReturnType<TLoaderFn>
 > extends Response | infer D
@@ -54,12 +56,8 @@ export default function CardProduct() {
         <div>
           <BreadCrumbs path={product.category} />
           <div className={styles.productWrapper}>
-            <img
-              onClick={(e) => increaseImage(e)}
-              className={styles.mainImage}
-              src={product.imgUrl}
-              alt={product.title}
-            />
+            <SliderCard foto={product.imgUrl} />
+
             <div className={styles.productDescription}>
               <h1>{product.title}</h1>
               <span className={styles.price}>{product.price} ₽</span>
